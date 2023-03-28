@@ -1,24 +1,16 @@
 {
-	"name": "@mhsdesign/esbuild-composes-from-css-modules",
+	"name": "esbuild-plugin-lightningcss-modules",
 	"version": "0.1.0",
 	"license": "MIT",
 	"author": {
 		"name": "Marc Henry Schultz"
 	},
-	"main": "dist/index.js",
+	"main": "index.js",
 	"files": [
-		"index.d.ts",
-		"dist/index.js",
-		"dist/index.js.map"
+		"index.js"
 	],
-	"scripts": {
-		"prepack": "esbuild src/index.ts --outdir=dist --format=cjs --sourcemap"
-	},
 	"dependencies": {
 		"lightningcss": "^1.18.0"
-	},
-	"devDependencies": {
-		"esbuild": "^0.17.7"
 	},
 	"peerDependencies": {
 		"esbuild": "~0.16.0 || ~0.17.0"
