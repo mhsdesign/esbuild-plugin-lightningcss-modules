@@ -35,6 +35,9 @@ yarn add esbuild-plugin-lightningcss-modules
 ## Usage
 
 ```js
+const {cssModules} = require('esbuild-plugin-lightningcss-modules');
+const {build} = require('esbuild');
+
 build({
     ...,
     plugins: [
