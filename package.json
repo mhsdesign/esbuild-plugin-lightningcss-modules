@@ -12,6 +12,9 @@
 	"dependencies": {
 		"lightningcss": "^1.18.0"
 	},
+	"devDependencies": {
+		"esbuild": "~0.17.0"
+	},
 	"peerDependencies": {
 		"esbuild": "~0.16.0 || ~0.17.0"
 	}
