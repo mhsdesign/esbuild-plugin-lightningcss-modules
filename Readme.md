@@ -2,6 +2,7 @@
 
 Yet another (minimal) css modules plugin using parcels rust based lightningcss implementation. (Full support for `composes: mixin from "./mixin.module.css"`)
 
+The plugin is already tested (on linux and mac) and used to build the following bigger project https://github.com/neos/neos-ui with around 100 css modules - it is inlined in the project though to reduce dependencies and maintaining burdens for now.
 
 <details>
 <summary>Another css modules plugin for esbuild? Pleaso no? Read more about the "why"...</summary>
@@ -21,7 +22,6 @@ The above implementations mostly rely on `post-cssmodules` and thus dont sucessf
 
 With one exception: `esbuild-css-modules-plugin`, this plugin uses also lightningcss as its core, but doesnt support composes yet and due to a more complex inject feature it is a bit more complex. I discussed with the maintainer if we would want to merge our two packages but due to limited time and different usecases (https://github.com/indooorsman/esbuild-css-modules-plugin/issues/53) im here to present my super simple implemented css module plugin for esbuild.
 
-The plugin is already tested (on linux and mac) and used to build the following bigger project https://github.com/neos/neos-ui with around 100 css modules - it is inlined in the project though to reduce dependencies and maintaining burdens for now.
 </details>
 
 ## Installation
