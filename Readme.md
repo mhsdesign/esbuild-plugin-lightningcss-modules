@@ -1,9 +1,10 @@
 # esbuild-plugin-lightningcss-modules
 
-Yet another css modules plugin for esbuild? Pleaso no?
+Yet another (minimal) css modules plugin using parcels rust based lightningcss implementation. (Full support for `composes: mixin from "./mixin.module.css"`)
+
 
 <details>
-<summary>Read more about the "why"...</summary>
+<summary>Another css modules plugin for esbuild? Pleaso no? Read more about the "why"...</summary>
 
 Yes sorry, i know there are a few implementions already out there:
 
@@ -22,6 +23,14 @@ With one exception: `esbuild-css-modules-plugin`, this plugin uses also lightnin
 
 The plugin is already tested (on linux and mac) and used to build the following bigger project https://github.com/neos/neos-ui with around 100 css modules - it is inlined in the project though to reduce dependencies and maintaining burdens for now.
 </details>
+
+## Installation
+
+Available on npm: https://www.npmjs.com/package/esbuild-plugin-lightningcss-modules
+
+```
+yarn add esbuild-plugin-lightningcss-modules
+```
 
 ## Usage
 
