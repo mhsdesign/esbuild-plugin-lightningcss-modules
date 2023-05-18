@@ -15,7 +15,7 @@ const { dirname, join } = require("path");
  * @param {import("lightningcss").CSSModulesConfig["pattern"]=} options.cssModulesPattern
  * @return {import("esbuild").Plugin}
  */
-const cssModules = (options) => {
+const cssModules = (options = {}) => {
     return {
         name: "css-modules",
         setup: ({onLoad, onResolve, initialOptions}) => {
