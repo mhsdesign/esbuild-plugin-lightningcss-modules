@@ -6,16 +6,16 @@ const { dirname, join } = require("path");
 /**
  * A generic cssModules plugin for esbuild based on lightningcss
  * 
- * @param {Object} options
- * @param {RegExp} options.includeFilter
- * @param {RegExp} options.excludeFilter
- * @param {import("lightningcss").TransformOptions["visitor"]} options.visitor
- * @param {import("lightningcss").TransformOptions["targets"]} options.targets
- * @param {import("lightningcss").TransformOptions["drafts"]} options.drafts
- * @param {import("lightningcss").CSSModulesConfig["pattern"]} options.cssModulesPattern
+ * @param {Object=} options
+ * @param {RegExp=} options.includeFilter
+ * @param {RegExp=} options.excludeFilter
+ * @param {import("lightningcss").TransformOptions["visitor"]=} options.visitor
+ * @param {import("lightningcss").TransformOptions["targets"]=} options.targets
+ * @param {import("lightningcss").TransformOptions["drafts"]=} options.drafts
+ * @param {import("lightningcss").CSSModulesConfig["pattern"]=} options.cssModulesPattern
  * @return {import("esbuild").Plugin}
  */
-const cssModules = (options) => {
+const cssModules = (options = {}) => {
     return {
         name: "css-modules",
         setup: ({onLoad, onResolve, initialOptions}) => {
