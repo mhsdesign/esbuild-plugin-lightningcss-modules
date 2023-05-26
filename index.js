@@ -39,7 +39,7 @@ const cssModules = (options = {}) => {
             })
 
             onLoad({filter: options.includeFilter ?? /\.module\.css$/}, async ({path}) => {
-                if (options.excludeFilter && options.excludeFilter.test(path)) {
+                if (options.excludeFilter?.test(path)) {
                     return;
                 }
 
@@ -66,11 +66,11 @@ const cssModules = (options = {}) => {
 
                 const id = "css-modules:\/\/" + createHash("sha256").update(path).digest('base64url') + '.css'
 
-                const finalcode = code.toString("utf8") + `/*# sourceMappingURL=data:application/json;base64,${map.toString("base64")} */`;
+                const finalCode = code.toString("utf8") + `/*# sourceMappingURL=data:application/json;base64,${map.toString("base64")} */`;
 
                 transpiledCssModulesMap.set(
                     id,
-                    { code: finalcode, resolveDir: dirname(path) }
+                    { code: finalCode, resolveDir: dirname(path) }
                 )
 
                 const quote = JSON.stringify;
@@ -83,7 +83,7 @@ const cssModules = (options = {}) => {
                 const dependencies = new Map()
 
                 /** @param {String} path */
-                const importDependeny = (path) => {
+                const importDependency = (path) => {
                     if (dependencies.has(path)) {
                         return dependencies.get(path)
                     }
@@ -113,7 +113,7 @@ const cssModules = (options = {}) => {
                                     break;
 
                                 case "dependency":
-                                    compiledCssClasses += ` " + ${importDependeny(composition.specifier)}[${quote(composition.name)}] + "`
+                                    compiledCssClasses += ` " + ${importDependency(composition.specifier)}[${quote(composition.name)}] + "`
                                     break;
                             }
                         }
