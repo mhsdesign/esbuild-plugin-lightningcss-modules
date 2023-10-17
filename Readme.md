@@ -43,7 +43,7 @@ build({
     plugins: [
         cssModules(
             {
-                // add your own or other plugins in the "visitor" section see
+                // Add your own or other plugins in the "visitor" section see
                 // https://lightningcss.dev/transforms.html
                 // visitor: myLightningcssPlugin(),
                 targets: {
@@ -52,7 +52,13 @@ build({
                 drafts: {
                     nesting: true
                 },
-                // pattern: 'my-company-[name]-[hash]-[local]'
+                // You can set here your own settings for cssModules
+                // https://lightningcss.dev/css-modules.html#local-css-variables
+                //    https://lightningcss.dev/css-modules.html#custom-naming-patterns
+                // cssModules: {
+                //    dashedIdents: true,
+                //    pattern: 'my-company-[name]-[hash]-[local]'
+                // },
             }
         )
     ]
