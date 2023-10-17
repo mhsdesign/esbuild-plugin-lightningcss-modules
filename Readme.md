@@ -54,7 +54,7 @@ build({
                 },
                 // You can set here your own settings for cssModules
                 // https://lightningcss.dev/css-modules.html#local-css-variables
-                //    https://lightningcss.dev/css-modules.html#custom-naming-patterns
+                // https://lightningcss.dev/css-modules.html#custom-naming-patterns
                 // cssModules: {
                 //    dashedIdents: true,
                 //    pattern: 'my-company-[name]-[hash]-[local]'
