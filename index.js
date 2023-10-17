@@ -45,13 +45,13 @@ const cssModules = (options = {}) => {
 
                 const rawCssBuffer = await fs.readFile(path)
 
+                const cssModules = { pattern: options.cssModulesPattern ?? `[hash]_[local]`, ...options.cssModules }
+
                 const { code, map, exports } = transform({
                     filename: path,
                     code: rawCssBuffer,
                     analyzeDependencies: false,
-                    cssModules: {
-                        pattern: options.cssModulesPattern ?? `[hash]_[local]`
-                    },
+                    cssModules,
                     sourceMap: true,
                     targets: options.targets,
                     drafts: options.drafts,
