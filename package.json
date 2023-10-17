@@ -1,6 +1,5 @@
 {
 	"name": "esbuild-plugin-lightningcss-modules",
-	"version": "0.1.1",
 	"license": "MIT",
 	"author": {
 		"name": "Marc Henry Schultz"
