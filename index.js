@@ -12,6 +12,7 @@ const { dirname, join } = require("path");
  * @param {import("lightningcss").TransformOptions["visitor"]=} options.visitor
  * @param {import("lightningcss").TransformOptions["targets"]=} options.targets
  * @param {import("lightningcss").TransformOptions["drafts"]=} options.drafts
+ * @param {import("lightningcss").TransformOptions["customAtRules"]=} options.customAtRules
  * @param {import("lightningcss").CSSModulesConfig["pattern"]=} options.cssModulesPattern
  * @param {import("lightningcss").CSSModulesConfig=} options.cssModules
  * @return {import("esbuild").Plugin}
@@ -57,6 +58,7 @@ const cssModules = (options = {}) => {
                     targets: options.targets,
                     drafts: options.drafts,
                     visitor: options.visitor,
+                    customAtRules: options.customAtRules,
                     // this way the correct relative path for the source map will be generated ;)
                     projectRoot: join(initialOptions.absWorkingDir || process.cwd(), initialOptions.outdir)
                 });
