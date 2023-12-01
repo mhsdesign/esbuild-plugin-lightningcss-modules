@@ -46,6 +46,7 @@ build({
                 // Add your own or other plugins in the "visitor" section see
                 // https://lightningcss.dev/transforms.html
                 // visitor: myLightningcssPlugin(),
+                // customAtRules: { myLigningCssRule1: {...} }
                 targets: {
                     chrome: 80 // aligns somewhat to es2020
                 },
@@ -77,3 +78,5 @@ If this is not the case, and they end with `.css` while you still want to exclud
 includeFilter: /\.css$/,
 excludeFilter: /@fortawesome\/fontawesome-svg-core\/|my-normal-css-file\.css|normalize\.css/,
 ```
+
+### ``
